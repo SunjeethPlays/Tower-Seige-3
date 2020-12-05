@@ -12,7 +12,7 @@ var sling;
 
 var brick;
 
-var scoree = 0;
+var score = 0;
 
 function setup() {
   createCanvas(1200,600);
@@ -23,7 +23,7 @@ function setup() {
   ground = new Ground (600,590,1200,20);
   platform = new Ground (500,400,300,20);
 
-  stone = new Hexagon (100,200,70,70);
+  stone = new Hexagon (100,200,50,50);
   sling = new Sling (stone.body,{x:100,y:300})
 
   brick = new Box (500,350,50,30);
@@ -129,7 +129,8 @@ function draw() {
   fill("white");
   text("Drag The Hexagonal Stone And Release It, To Throw It towards The Blocks",50,30);
   text("Press Space To Attach The Hexagonal Stone To Your Catapult After you Throw It",50,70);
-  text("score : " + scoree,750,40)
+  text("Score : " + score,1000,550);
+  
 
 }
 
@@ -151,4 +152,3 @@ function keyPressed(){
 
   }
 }
-

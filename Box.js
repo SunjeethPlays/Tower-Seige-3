@@ -11,6 +11,7 @@ class Box {
         this.body = Bodies.rectangle(x,y,width,height,options);
         this.width = width;
         this.height = height;
+        this.Visiblity = 255;
         World.add(world,this.body);
 
     }
@@ -39,12 +40,15 @@ class Box {
         }
     }
 
-        function score() {
+    score(){
 
-            if (this.visiblity < 0 && this.visibility >- 105) {
-                scoree++;
-            }
+        if (this.Visiblity < 0 && this.Visiblity > -1005){
+
+          score++;
           
-          }
+        }
+
+      }
 
 }
+

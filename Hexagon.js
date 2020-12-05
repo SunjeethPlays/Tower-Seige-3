@@ -11,8 +11,6 @@ class Hexagon {
         this.radius = radius;
         World.add(world,this.body);
 
-        this.image = loadImage ("polygon.png");
-
     }
 
     display() {
@@ -24,8 +22,8 @@ class Hexagon {
         translate(pos.x,pos.y);
         rotate(angle);
         fill("yellow");
-        imageMode(CENTER);
-        image(this.image,0,0,this.radius,this.radius);
+        ellipseMode(RADIUS);
+        ellipse(0,0,this.radius,this.radius);
         pop();
     }
 }
